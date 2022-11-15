@@ -1,0 +1,224 @@
+/*
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+*/
+
+body{
+    background-color: rgb(43, 49, 41);
+    color: rgb(184, 184, 176);
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form {
+max-width: 550px;
+margin: 0px auto;
+color: #fff;
+padding: 30px 0px;
+}
+.load {
+position: relative;
+}
+.load::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(37, 37, 37, 0.534) url("https://i.gifer.com/6os.gif") center / 100px no-repeat;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+.load._sending::after{
+    opacity: 1;
+    visibility: visible;
+}
+.form__title {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0px 0px 30px 0px;
+}
+.form__item {
+    margin-bottom: 20px;
+}
+.form__label {
+    font-size: 19px;
+    display: block;
+    margin-bottom: 10px ;
+}
+.form__input {
+    height: 50px;
+    padding: 0px 20px;
+    border-radius: 5px;
+    width: 90%;
+    font-size: 18px;
+}
+.form__input:focus{
+    box-shadow: 2px 2px 5px 0.1px rgb(231, 230, 230);
+}
+.form__textarea {
+    
+    height: 80px;
+    padding: 0px 20px;
+    border-radius: 5px;
+    width: 90%;
+    font-size: 18px;
+    resize: vertical;
+}
+.file {
+
+}
+.file__item {
+    position: relative;
+    
+}
+.file__input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    font-size: 0;
+    opacity: 0;
+    
+}
+.file__button {
+    display: inline-flex;
+    min-height: 40px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(177, 37, 196);
+    padding: 0px 20px;
+    transition: background-color 0.5s ease 0s;
+    position: relative;
+}
+.file__button:hover{
+    background-color: rgb(132, 35, 145);
+}
+.file__button:active{
+    top: -2px;
+}
+.file__preview {
+    
+    max-height: 100px;
+    padding-bottom: 10px ;
+}
+.file__preview img{
+    max-height: 100px ;
+}
+.checkbox {
+    margin-top: 20px;
+}
+.checkbox._error .checkbox__label::before{
+    box-shadow: 0px 0px 10px 4px rgb(236, 16, 16);
+
+}
+.checkbox__input {
+    display: none;
+}
+.checkbox__label {
+    font-size: 16px;
+    line-height: 140%;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.checkbox__input:checked + .checkbox__label::after{
+    transform: scale(1);
+}
+.checkbox__label::before{
+    content: '';
+    align-self: flex-start;
+    height: 20px;
+    flex: 0 0 20px;
+    background-color: cornsilk;
+    border-radius: 5px;
+    margin-right: 10px;
+    
+}
+.checkbox__label::after{
+    transition: transform 0.5s ease 0s;
+    content: '';
+    height: 16px;
+    width: 16px;
+    align-self: flex-start;
+    flex: 0 0 16px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background-color: rgb(41, 122, 41);
+    border-radius: 5px;
+    transform:scale(0);
+    
+}
+.checkbox__label a{
+    color: rgb(41, 122, 41);
+}
+.form__button{
+    width: 100%;
+}
+.button {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: rgb(64, 122, 41);
+    border: rgb(64, 122, 41);
+    font-weight: 700;
+    box-shadow: 2px 5px 7px 3px rgb(5, 20, 5);
+    transition: background-color 0.5s ease 0s;
+    position: relative;
+}
+.button:hover{
+    background-color: rgb(51, 100, 32);
+
+}
+.button:active{
+top: -3px;
+}
+
+.form__input._error{
+    box-shadow: 0px 0px 10px 4px rgb(236, 16, 16);
+
+}

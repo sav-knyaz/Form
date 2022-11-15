@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="load">
+        <div class="form">
+            <form action="" name = "message" class="form__body">
+                <h1 class="form__title">Отправка form-ы на почту</h1>
+                <div class="form__item">
+                 <label for="formName" class="form__label">Name*</label>
+                 <input type="text" name="name" id="formName" placeholder="write name" class="form__input _req">
+                </div>
+                <div class="form__item">
+                    <label for="formEmail" class="form__label">E-mail*</label>
+                    <input type="text" name="Email" id="formEmail" placeholder="write e-mail" class="form__input _req _email">
+                </div>
+                <div class="form__item">
+                    <label for="message" class="form__label">Message</label>
+                    <textarea name="message" id="message" class="form__input" cols="50" rows="10" placeholder="write your message"></textarea>
+                </div>
+                <div class="form__item">
+                    <div class="form__label">Прикрепите фотографию</div>
+                    <div class="file">
+                        <div class="file__item">
+                            <input id="formImage" type="file" name ="image" class="file__input">
+                        </div>
+                        <div id='fileButton' class="file__button">Выбрать</div>
+                        <div id="formPreview" class="file__preview"></div>
+                    </div>
+                    <div class="form__item">
+                        <div class="checkbox">
+                            <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req" >
+                            <label for="formAgreement" class="checkbox__label"><span>Я даю согласие на обработку персональныз данных в соответствии с <a href="">условием.</a></span></label>
+                        </div>
+                    </div>
+                    <div class="form__button">
+                        <button type="submit" class="button" id="sendButton" >Отправить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+        <script src="form.js"></script>
+    </body>
+</html>
